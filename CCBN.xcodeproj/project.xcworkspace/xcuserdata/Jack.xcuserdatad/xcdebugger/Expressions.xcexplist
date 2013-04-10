@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[AppDelegate requestFailed:]:AppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[request error]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate application:didReceiveRemoteNotification:]:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate application:didRegisterForRemoteNotificationsWithDeviceToken:]:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate application:didFinishLaunchingWithOptions:]:AppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[Model sharedModel].homePageViewController.view">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ScheduleViewController viewDidLoad]:ScheduleViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[Model sharedModel].ccbn.eventSchedules">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CCBN initWithJSONData:]:CCBN.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[data objectForKey:@&quot;speakers&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[HomePageViewController updateNewBadge:]:HomePageViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[Model sharedModel].unreadMSG">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MessageViewController tableView:cellForRowAtIndexPath:]:MessageViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[Model sharedModel].messages">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[HomePageViewController requestFailed:]:HomePageViewController.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

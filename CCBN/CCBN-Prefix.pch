@@ -1,0 +1,19 @@
+//
+// Prefix header for all source files of the 'CCBN' target in the 'CCBN' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+
+    #define ServerURL                       @"http://180.168.35.37:8080"
+    //#define ServerURL                       @"http://192.168.0.109:8080"
+    #define NotificationReceiveNewMessage   @"ReceiveNewMessage"
+#endif

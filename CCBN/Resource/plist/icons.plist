@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imageUrl</key>
+		<string>schedule.png</string>
+		<key>index</key>
+		<integer>0</integer>
+		<key>page</key>
+		<integer>0</integer>
+		<key>sectionName</key>
+		<string>ScheduleViewController</string>
+		<key>title</key>
+		<string>日 程</string>
+	</dict>
+	<dict>
+		<key>imageUrl</key>
+		<string>news.png</string>
+		<key>index</key>
+		<integer>1</integer>
+		<key>page</key>
+		<integer>0</integer>
+		<key>sectionName</key>
+		<string>MessageViewController</string>
+		<key>title</key>
+		<string>通  知</string>
+	</dict>
+	<dict>
+		<key>imageUrl</key>
+		<string>maps.png</string>
+		<key>index</key>
+		<integer>2</integer>
+		<key>page</key>
+		<integer>0</integer>
+		<key>sectionName</key>
+		<string>ExhibitorMapViewController</string>
+		<key>title</key>
+		<string>展会地图</string>
+	</dict>
+	<dict>
+		<key>imageUrl</key>
+		<string>speakers.png</string>
+		<key>index</key>
+		<integer>3</integer>
+		<key>page</key>
+		<integer>0</integer>
+		<key>sectionName</key>
+		<string>SpeakerViewController</string>
+		<key>title</key>
+		<string>发言者</string>
+	</dict>
+	<dict>
+		<key>imageUrl</key>
+		<string>setting.png</string>
+		<key>index</key>
+		<integer>4</integer>
+		<key>page</key>
+		<integer>0</integer>
+		<key>sectionName</key>
+		<string>SettingViewController</string>
+		<key>title</key>
+		<string>设 置</string>
+	</dict>
+	<dict>
+		<key>imageUrl</key>
+		<string>about.png</string>
+		<key>index</key>
+		<integer>5</integer>
+		<key>page</key>
+		<integer>0</integer>
+		<key>sectionName</key>
+		<string>AboutUsViewController</string>
+		<key>title</key>
+		<string>关于我们</string>
+	</dict>
+	<dict>
+		<key>imageUrl</key>
+		<string>exhibitors.png</string>
+		<key>index</key>
+		<integer>6</integer>
+		<key>page</key>
+		<integer>0</integer>
+		<key>sectionName</key>
+		<string>ExhibitorViewController</string>
+		<key>title</key>
+		<string>参展商</string>
+	</dict>
+</array>
+</plist>
