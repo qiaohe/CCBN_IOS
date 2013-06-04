@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface News : NSObject{
-    NSString *NewsTitle;
-    NSString *NewsDate;
-    NSString *NewsContent;
+    NSString  *NewsTitle;
+    double    NewsDate;
+    NSString  *NewsContent;
 }
 
-@property (nonatomic, retain) NSString *NewsTitle;
-@property (nonatomic, retain) NSString *NewsDate;
-@property (nonatomic, retain) NSString *NewsContent;
+@property (nonatomic, retain) NSString  *NewsTitle;
+@property (nonatomic, assign) double NewsDate;
+@property (nonatomic, retain) NSString  *NewsContent;
 
 @end

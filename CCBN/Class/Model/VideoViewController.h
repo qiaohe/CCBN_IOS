@@ -8,15 +8,18 @@
 
 #import "CCBNViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "ASIHTTPRequest.h"
 
 
-@interface VideoViewController : CCBNViewController<MPMediaPickerControllerDelegate>{
+@interface VideoViewController : CCBNViewController<MPMediaPickerControllerDelegate,ASIHTTPRequestDelegate,UITableViewDataSource,UITableViewDelegate>{
     MPMoviePlayerController     *moviePlayer;
-    UITableViewController       *tableViewController;
-    
+    MPMoviePlayerViewController *moviePlayers;
+    UITableView                 *tableViewController;
+    CGRect                      winSize;
 }
 
-@property (nonatomic, strong) IBOutlet MPMoviePlayerController *moviePlayer;
-@property (nonatomic, strong) UITableViewController            *tableViewController;
+@property (nonatomic, strong) IBOutlet MPMoviePlayerController     *moviePlayer;
+@property (nonatomic, strong) IBOutlet MPMoviePlayerViewController *moviePlayers;
+@property (nonatomic, strong) IBOutlet UITableView                 *tableViewController;
 
 @end

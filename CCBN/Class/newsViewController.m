@@ -46,11 +46,10 @@
     NSString *requestStr = [request responseString];
     
     NSArray *JsonStr = [requestStr JSONValue];
-    NSLog(@"jconstr = %@",[JsonStr objectAtIndex:0]);
     for (NSDictionary *e in JsonStr) {
         News *aNew = [[News alloc]init];
-        aNew.NewsTitle = [e objectForKey:@"title"];
-        aNew.NewsDate = [[e objectForKey:@"date"]stringValue];
+        aNew.NewsTitle   = [e objectForKey:@"title"];
+        aNew.NewsDate    =  [[e objectForKey:@"date"]doubleValue];
         aNew.NewsContent = [e objectForKey:@"content"];
         [self.NewsArray addObject:aNew];
     }
@@ -72,8 +71,17 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:Title_ID];
     }
     News *aNew = [self.NewsArray objectAtIndex:indexPath.row];
+    NSTimeInterval  timeZoneOffset=[[NSTimeZone systemTimeZone] secondsFromGMT];
     cell.textLabel.text       = aNew.NewsTitle;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"TEL:%@",aNew.NewsDate];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd hh:mm"];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:aNew.NewsDate/1000];
+
+    NSString *NowDate = [dateFormat stringFromDate:date];
+    date = [date dateByAddingTimeInterval:timeZoneOffset];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"发布时间:%@",NowDate];
+    [dateFormat release];
+
     return cell;
 }
 

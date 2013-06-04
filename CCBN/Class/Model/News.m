@@ -17,7 +17,6 @@
 
 -(void) dealloc{
     [self.NewsTitle   release];
-    [self.NewsDate    release];
     [self.NewsContent release];
     [super            dealloc];
 }
