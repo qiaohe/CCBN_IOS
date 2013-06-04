@@ -11,10 +11,12 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[AppDelegate application:didReceiveRemoteNotification:]:AppDelegate.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[AppDelegate application:didRegisterForRemoteNotificationsWithDeviceToken:]:AppDelegate.m">
+         contextName = "-[MessageViewController tableView:cellForRowAtIndexPath:]:MessageViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[Model sharedModel].messages">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[AppDelegate application:didFinishLaunchingWithOptions:]:AppDelegate.m">
@@ -22,13 +24,8 @@
             <PersistentString
                value = "[Model sharedModel].homePageViewController.view">
             </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[ScheduleViewController viewDidLoad]:ScheduleViewController.m">
-         <PersistentStrings>
             <PersistentString
-               value = "[Model sharedModel].ccbn.eventSchedules">
+               value = "launchOptions">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -41,23 +38,48 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[ScheduleViewController tableView:didSelectRowAtIndexPath:]:ScheduleViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate application:didReceiveRemoteNotification:]:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ScheduleViewController viewDidLoad]:ScheduleViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[Model sharedModel].ccbn.eventSchedules">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SettingViewController switchAction:]:SettingViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "userInfo">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate application:didRegisterForRemoteNotificationsWithDeviceToken:]:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SettingViewController tableView:cellForRowAtIndexPath:]:SettingViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[userInfo boolForKey:title]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[HomePageViewController requestFailed:]:HomePageViewController.m">
+      </ContextState>
+      <ContextState
          contextName = "-[HomePageViewController updateNewBadge:]:HomePageViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "[Model sharedModel].unreadMSG">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[MessageViewController tableView:cellForRowAtIndexPath:]:MessageViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[Model sharedModel].messages">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[HomePageViewController requestFailed:]:HomePageViewController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

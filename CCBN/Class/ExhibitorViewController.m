@@ -28,9 +28,7 @@
 }
 
 -(id)init
-{
-    NSLog(@"INIT %p", self);
-    
+{   
     if ((self = [super init]))
     {
         typeGroup = [[NSMutableArray alloc] init];

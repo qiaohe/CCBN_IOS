@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "ASIHTTPRequest.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @class HomePageViewController;
 @class CCBNViewController;
@@ -16,6 +17,7 @@
 
 @interface Model : NSObject<ASIHTTPRequestDelegate> {
     BOOL sendingContent;
+    SystemSoundID messageSound;
 }
 
 + (Model *)sharedModel;
@@ -34,4 +36,5 @@
 - (void)gotoPage:(CCBNViewController *)view option:(UIViewAnimationOptions)options;
 - (void)addNewMessage:(NSDictionary *)newMsg;
 - (void)updateContent;
+- (void) playMessageSound;
 @end

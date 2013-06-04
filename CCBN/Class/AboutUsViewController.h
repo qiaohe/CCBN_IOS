@@ -10,5 +10,5 @@
 
 @interface AboutUsViewController : CCBNViewController
 
-@property (retain, nonatomic) IBOutlet UITextView *aboutUsDescriptioin;
+@property (retain, nonatomic) IBOutlet UIWebView *aboutUsDescriptioin;
 @end

@@ -16,7 +16,7 @@
 	</dict>
 	<dict>
 		<key>imageUrl</key>
-		<string>news.png</string>
+		<string>message.png</string>
 		<key>index</key>
 		<integer>1</integer>
 		<key>page</key>
@@ -85,6 +85,42 @@
 		<string>ExhibitorViewController</string>
 		<key>title</key>
 		<string>参展商</string>
+	</dict>
+	<dict>
+		<key>imageUrl</key>
+		<string>news.png</string>
+		<key>index</key>
+		<integer>7</integer>
+		<key>page</key>
+		<integer>0</integer>
+		<key>sectionName</key>
+		<string>NewsViewController</string>
+		<key>title</key>
+		<string>新闻</string>
+	</dict>
+	<dict>
+		<key>imageUrl</key>
+		<string>news.png</string>
+		<key>index</key>
+		<integer>8</integer>
+		<key>page</key>
+		<integer>0</integer>
+		<key>sectionName</key>
+		<string>TwoDimensionCodeViewController</string>
+		<key>title</key>
+		<string>二维码</string>
+	</dict>
+	<dict>
+		<key>imageUrl</key>
+		<string>news.png</string>
+		<key>index</key>
+		<integer>0</integer>
+		<key>page</key>
+		<integer>1</integer>
+		<key>sectionName</key>
+		<string>VideoViewController</string>
+		<key>title</key>
+		<string>视频</string>
 	</dict>
 </array>
 </plist>

@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    _aboutUsDescriptioin.text = [Model sharedModel].ccbn.description;
+    [_aboutUsDescriptioin loadHTMLString:[Model sharedModel].ccbn.description baseURL:nil];
 }
 
 - (void)didReceiveMemoryWarning

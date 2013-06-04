@@ -47,6 +47,16 @@ BMKMapManager* _mapManager;
     [Model sharedModel].homePageViewController = [[[HomePageViewController alloc] init] autorelease];
     self.transitionController = [[[TransitionController alloc] initWithViewController:[Model sharedModel].homePageViewController] autorelease];
     
+    
+    NSDictionary *pushNotificationPayload = [launchOptions valueForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    if(pushNotificationPayload) {
+        for (id key in pushNotificationPayload) {
+            NSLog(@"key: %@, value: %@ \n", key, [pushNotificationPayload objectForKey:key]);
+        }
+        //[[Model sharedModel] addNewMessage:pushNotificationPayload];
+        [self application:application didReceiveRemoteNotification:pushNotificationPayload];
+    }
+    
     self.window.rootViewController = self.transitionController;
     [self.window makeKeyAndVisible];
     return YES;
@@ -54,6 +64,7 @@ BMKMapManager* _mapManager;
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     [[Model sharedModel] addNewMessage:userInfo];
+    [[Model sharedModel] playMessageSound];
 }
 
 #pragma mark -
