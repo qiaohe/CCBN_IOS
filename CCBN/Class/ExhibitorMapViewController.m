@@ -434,14 +434,11 @@
             case _BY_BUS_:{
                 NSLog(@"By Bus");
                 BMKTransitRoutePlan *route = [RoutesPlan.plans objectAtIndex:(alertView.tag - 200)];
-                for (BMKLine *e in route.routes) {
-                    for (int i = 0; i<5; i++) {
-                        BMKMapPoint point = *([e points] + i);
-                        NSLog(@"point x = %lf  y = %lf",point.x,point.y);
+                BMKLine *e = [route.routes objectAtIndex:0];
+                for (int i = 0; i<5; i++) {
+                    BMKMapPoint point = *([e points] + i);
+                    NSLog(@"point x = %lf  y = %lf",point.x,point.y);
                         
-                    }
-                    
-                    
                 }
                 
                 break;
