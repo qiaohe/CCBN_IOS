@@ -14,12 +14,16 @@
 @interface VideoViewController : CCBNViewController<MPMediaPickerControllerDelegate,ASIHTTPRequestDelegate,UITableViewDataSource,UITableViewDelegate>{
     MPMoviePlayerController     *moviePlayer;
     MPMoviePlayerViewController *moviePlayers;
-    UITableView                 *tableViewController;
+    UITableView                 *movieList;
     CGRect                      winSize;
+    NSArray                     *movieArray;
+    UIButton                    *MovieBackButton;
 }
 
 @property (nonatomic, strong) IBOutlet MPMoviePlayerController     *moviePlayer;
 @property (nonatomic, strong) IBOutlet MPMoviePlayerViewController *moviePlayers;
-@property (nonatomic, strong) IBOutlet UITableView                 *tableViewController;
+@property (nonatomic, strong) IBOutlet UITableView                 *movieList;
+@property (nonatomic, retain) NSArray                              *movieArray;
+@property (nonatomic, retain) UIButton                             *MovieBackButton;
 
 @end

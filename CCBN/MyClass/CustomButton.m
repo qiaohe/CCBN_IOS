@@ -59,7 +59,7 @@
                 [_invocation setArgument:&self atIndex:2];                
             }
         }
-        if (text==@"X") {			
+        if ([text isEqualToString:@"X"]) {
 			UIImage	*image = [UIImage imageNamed:@"backspace.png"];
 			UIImageView	*imageView = [[UIImageView alloc] initWithFrame:CGRectMake (20,10,40,32)];
 			
@@ -72,7 +72,7 @@
 			
 			[imageView setImage:image];
 			[self addSubview:imageView];
-		} else if (text==@"Tab") {
+		} else if ([text isEqualToString:@"Tab"]) {
 			
 			UIImage	*image = [UIImage imageNamed:@"tab2.png"];
 			UIImageView	*imageView = [[UIImageView alloc] initWithFrame:CGRectMake (20,10,40,32)];

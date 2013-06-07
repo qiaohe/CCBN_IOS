@@ -72,6 +72,7 @@
     }
     News *aNew = [self.NewsArray objectAtIndex:indexPath.row];
     NSTimeInterval  timeZoneOffset=[[NSTimeZone systemTimeZone] secondsFromGMT];
+    cell.textLabel.font       = [UIFont systemFontOfSize:16];
     cell.textLabel.text       = aNew.NewsTitle;
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
     [dateFormat setDateFormat:@"yyyy-MM-dd hh:mm"];

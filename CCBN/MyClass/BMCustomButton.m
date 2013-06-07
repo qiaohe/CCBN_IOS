@@ -14,6 +14,7 @@
 @synthesize winSize;
 @synthesize titleLabel;
 @synthesize titleButton;
+@synthesize Btn;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -30,6 +31,7 @@
     if (Width < winSize.size.width/6) {
         Width  = winSize.size.width/6;
     }*/
+    
     CGRect frame = CGRectMake(Origin.x - Width/2, Origin.y - (Width + Width/3)/2, Width, Width + Width/3);
     self = [super initWithFrame:frame];
     if (self) {
@@ -43,6 +45,11 @@
         self.titleLabel.font             = [UIFont systemFontOfSize:10.0f];
         [self addSubview:self.titleButton];
         [self addSubview:self.titleLabel];
+        
+        self.Btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.Btn.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+        self.Btn.backgroundColor = [UIColor clearColor];
+        //[self addSubview:self.Btn];
     }
     self.layer.cornerRadius  = 5;
     self.backgroundColor     = [UIColor whiteColor];

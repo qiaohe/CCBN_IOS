@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		04029EE6170EA49400139E01 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 04029EE5170EA49400139E01 /* Message.m */; };
-		04069F9E1709A43C0039FDC2 /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04069F9C1709A43C0039FDC2 /* libbaidumapapi.a */; };
 		04069F9F1709A43C0039FDC2 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04069F9D1709A43C0039FDC2 /* mapapi.bundle */; };
 		04069FA11709B28A0039FDC2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04069FA01709B28A0039FDC2 /* MapKit.framework */; };
 		04069FA31709B4BB0039FDC2 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04069FA21709B4BB0039FDC2 /* libc++.dylib */; };
@@ -93,6 +92,7 @@
 		04EC2C7E1710826400306A93 /* ScheduleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EC2C7C1710826300306A93 /* ScheduleDetailViewController.m */; };
 		04EC2C7F1710826400306A93 /* ScheduleDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EC2C7D1710826400306A93 /* ScheduleDetailViewController.xib */; };
 		04FD9736170E9EB6006B54E8 /* messages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04FD9735170E9EB6006B54E8 /* messages.plist */; };
+		CE02BEBB175F13B000FC834C /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE02BEBA175F13B000FC834C /* libbaidumapapi.a */; };
 		CE11703E175756B8000CB8F1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE117028175756B8000CB8F1 /* ASIAuthenticationDialog.m */; };
 		CE11703F175756B8000CB8F1 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = CE11702B175756B8000CB8F1 /* ASIDataCompressor.m */; };
 		CE117040175756B8000CB8F1 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = CE11702D175756B8000CB8F1 /* ASIDataDecompressor.m */; };
@@ -166,7 +166,6 @@
 		CEDEB76D175D907900A4A81D /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDEB76B175D907900A4A81D /* VideoViewController.xib */; };
 		CEDEB77B175D93AF00A4A81D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDEB77A175D93AF00A4A81D /* MediaPlayer.framework */; };
 		CEFE8C77175DC79400E2E904 /* CCBNMovie1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CEFE8C74175DC79400E2E904 /* CCBNMovie1.mp4 */; };
-		CEFE8C78175DC79400E2E904 /* CCBNMovie2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CEFE8C75175DC79400E2E904 /* CCBNMovie2.mp4 */; };
 		CEFE8C79175DC79400E2E904 /* CCBNMovie3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CEFE8C76175DC79400E2E904 /* CCBNMovie3.mp4 */; };
 /* End PBXBuildFile section */
 
@@ -202,7 +201,6 @@
 		04069F991709A43C0039FDC2 /* BMKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKTypes.h; sourceTree = "<group>"; };
 		04069F9A1709A43C0039FDC2 /* BMKUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKUserLocation.h; sourceTree = "<group>"; };
 		04069F9B1709A43C0039FDC2 /* BMKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKVersion.h; sourceTree = "<group>"; };
-		04069F9C1709A43C0039FDC2 /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbaidumapapi.a; path = CCBN/Library/BaiDuMap/libbaidumapapi.a; sourceTree = "<group>"; };
 		04069F9D1709A43C0039FDC2 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = CCBN/Library/BaiDuMap/mapapi.bundle; sourceTree = "<group>"; };
 		04069FA01709B28A0039FDC2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		04069FA21709B4BB0039FDC2 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
@@ -325,6 +323,7 @@
 		04EC2C7C1710826300306A93 /* ScheduleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleDetailViewController.m; sourceTree = "<group>"; };
 		04EC2C7D1710826400306A93 /* ScheduleDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleDetailViewController.xib; sourceTree = "<group>"; };
 		04FD9735170E9EB6006B54E8 /* messages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = messages.plist; sourceTree = "<group>"; };
+		CE02BEBA175F13B000FC834C /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbaidumapapi.a; path = CCBN/Resource/libbaidumapapi.a; sourceTree = "<group>"; };
 		CE117027175756B8000CB8F1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		CE117028175756B8000CB8F1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		CE117029175756B8000CB8F1 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -435,7 +434,6 @@
 		CEDEB76B175D907900A4A81D /* VideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VideoViewController.xib; path = Model/VideoViewController.xib; sourceTree = "<group>"; };
 		CEDEB77A175D93AF00A4A81D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CEFE8C74175DC79400E2E904 /* CCBNMovie1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = CCBNMovie1.mp4; sourceTree = "<group>"; };
-		CEFE8C75175DC79400E2E904 /* CCBNMovie2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = CCBNMovie2.mp4; sourceTree = "<group>"; };
 		CEFE8C76175DC79400E2E904 /* CCBNMovie3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = CCBNMovie3.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -458,8 +456,8 @@
 				0448ABE316FF336400BF130B /* Foundation.framework in Frameworks */,
 				0448ABE416FF336400BF130B /* CoreGraphics.framework in Frameworks */,
 				0448ABE516FF336400BF130B /* CoreData.framework in Frameworks */,
-				04069F9E1709A43C0039FDC2 /* libbaidumapapi.a in Frameworks */,
 				043D1EBF1715AC6D00434841 /* libccbn.a in Frameworks */,
+				CE02BEBB175F13B000FC834C /* libbaidumapapi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,7 +534,6 @@
 			isa = PBXGroup;
 			children = (
 				CEFE8C74175DC79400E2E904 /* CCBNMovie1.mp4 */,
-				CEFE8C75175DC79400E2E904 /* CCBNMovie2.mp4 */,
 				CEFE8C76175DC79400E2E904 /* CCBNMovie3.mp4 */,
 				043D1EBC1715A7E600434841 /* message.wav */,
 				049656921708904600762F2B /* cutline@2x.png */,
@@ -682,13 +679,13 @@
 		04A0A5E216F2009C006A0A04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE02BEBA175F13B000FC834C /* libbaidumapapi.a */,
 				CEDEB77A175D93AF00A4A81D /* MediaPlayer.framework */,
 				043D1EC01715B46000434841 /* AudioToolbox.framework */,
 				04069FA41709B6820039FDC2 /* QuartzCore.framework */,
 				04069FA21709B4BB0039FDC2 /* libc++.dylib */,
 				04069FA01709B28A0039FDC2 /* MapKit.framework */,
 				04069F9D1709A43C0039FDC2 /* mapapi.bundle */,
-				04069F9C1709A43C0039FDC2 /* libbaidumapapi.a */,
 				0448ABDB16FF334D00BF130B /* CoreLocation.framework */,
 				0448ABD916FF333D00BF130B /* CFNetwork.framework */,
 				0448ABD716FF333500BF130B /* SystemConfiguration.framework */,
@@ -1032,7 +1029,6 @@
 				CE33B571175C19D4008ED2DF /* icon_location_button@2x.png in Resources */,
 				CEDEB76D175D907900A4A81D /* VideoViewController.xib in Resources */,
 				CEFE8C77175DC79400E2E904 /* CCBNMovie1.mp4 in Resources */,
-				CEFE8C78175DC79400E2E904 /* CCBNMovie2.mp4 in Resources */,
 				CEFE8C79175DC79400E2E904 /* CCBNMovie3.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1127,7 +1123,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 宏亮 马 (N33VBR2RJE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 宏亮 马 (N33VBR2RJE)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1142,6 +1139,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "D7C90E48-6EF9-48FC-8710-A5DD4AEDE7C0";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D7C90E48-6EF9-48FC-8710-A5DD4AEDE7C0";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1157,6 +1156,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 宏亮 马 (N33VBR2RJE)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1165,6 +1165,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "D7C90E48-6EF9-48FC-8710-A5DD4AEDE7C0";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1182,18 +1183,21 @@
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCBN/CCBN-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDKROOT}/user/include/libxml2";
 				INFOPLIST_FILE = "CCBN/CCBN-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/CCBN/Library/BaiDuMap\"",
 					"\"$(SRCROOT)/CCBN/inc\"",
+					"\"$(SRCROOT)/CCBN/Resource\"",
+					"\"$(SRCROOT)\"",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "420AF33F-0AEE-4A79-A8C5-46CF561808D2";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "420AF33F-0AEE-4A79-A8C5-46CF561808D2";
-				SDKROOT = iphoneos6.0;
+				PROVISIONING_PROFILE = "7C4A9BAF-9494-45B0-97D2-2600EC0E4245";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7C4A9BAF-9494-45B0-97D2-2600EC0E4245";
+				SDKROOT = iphoneos6.1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1205,24 +1209,25 @@
 				ARCHS = armv7;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jack Wang (BCBU22V5NF)";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jack Wang (BCBU22V5NF)";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCBN/CCBN-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDKROOT}/user/include/libxml2";
 				INFOPLIST_FILE = "CCBN/CCBN-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/CCBN/Library/BaiDuMap\"",
 					"\"$(SRCROOT)/CCBN/inc\"",
+					"\"$(SRCROOT)/CCBN/Resource\"",
+					"\"$(SRCROOT)\"",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "420AF33F-0AEE-4A79-A8C5-46CF561808D2";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "420AF33F-0AEE-4A79-A8C5-46CF561808D2";
-				SDKROOT = iphoneos6.0;
+				SDKROOT = iphoneos6.1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};

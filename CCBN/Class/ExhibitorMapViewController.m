@@ -28,17 +28,23 @@
 {
     [super viewDidLoad];
     
+    
+    [self ReloadData];
+}
+
+-(void)ReloadData{
     winSize = [[UIScreen mainScreen]bounds];
     SearchViewIsShow = NO;
     IsFirstUpdate    = YES;
     IsSearch         = NO;
-    
     BMCustomButton *searchBtn = [[[BMCustomButton alloc]initWithWidth:winSize.size.width/10 andOrigin:CGPointMake(winSize.size.width*9/10, winSize.size.height - (winSize.size.width/10 + winSize.size.width/10*3)/2)]autorelease];
     searchBtn.winSize = winSize;
     [searchBtn.titleButton setBackgroundImage:[UIImage imageNamed:@"icon_route_search_button_normal@2x.png"] forState:UIControlStateNormal];
     [searchBtn.titleButton setBackgroundImage:[UIImage imageNamed:@"icon_route_search_button_pressed@2x.png"]  forState:UIControlStateHighlighted];
     searchBtn.titleLabel.text = @"路线";
     [searchBtn.titleButton addTarget:self action:@selector(Searchs:) forControlEvents:UIControlEventTouchUpInside];
+    [searchBtn.Btn addTarget:self action:@selector(Searchs:) forControlEvents:UIControlEventTouchUpInside];
+    [searchBtn addSubview:searchBtn.Btn];
     [self.view addSubview:searchBtn];
     
     UIView   *view       = [[[UIView alloc]init]autorelease];
@@ -72,7 +78,7 @@
 
 -(void)mapView:(BMKMapView *)mapViews didUpdateUserLocation:(BMKUserLocation *)userLocation{
     NSLog(@"update");
-    
+    [search reverseGeocode:mapView.userLocation.coordinate];
     if (IsFirstUpdate) {
         
     }
@@ -92,7 +98,11 @@
     BMKCoordinateRegion region = BMKCoordinateRegionMake(mapView.userLocation.location.coordinate, BMKCoordinateSpanMake(0.02, 0.02));
     NSLog(@"center lati = %f,center long = %f",region.center.latitude,region.center.longitude);
     BMKCoordinateRegion kitRegion = [mapView regionThatFits:region];
-    [mapView setRegion:kitRegion animated:YES];
+    //[mapView setRegion:kitRegion animated:YES];
+    mapView.region = kitRegion;
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:mapView.userLocation.title delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    [alertView release];
 }
 
 - (void)Searchs:(UIButton*)sender{
@@ -114,8 +124,11 @@
             [busBtn.titleButton setBackgroundImage:[UIImage imageNamed:@"icon_routesearch_seg_bus@2x.png"] forState:UIControlStateNormal];
             [busBtn.titleButton setBackgroundImage:[UIImage imageNamed:@"icon_routesearch_seg_bus_selected@2x.png"] forState:UIControlStateHighlighted];
             [busBtn.titleButton addTarget:self action:@selector(ShowRoute:) forControlEvents:UIControlEventTouchUpInside];
+            [busBtn addTarget:self action:@selector(ShowRoute:) forControlEvents:UIControlEventTouchUpInside];
             busBtn.titleLabel.text = @"公交";
             busBtn.titleButton.tag = _BY_BUS_;
+            busBtn.tag             = _BY_BUS_;
+            busBtn.Btn.tag             = _BY_BUS_;
             [view addSubview:busBtn];
 
             BMCustomButton *carBtn = [[[BMCustomButton alloc]initWithWidth:30 andOrigin:CGPointMake(130, 20)]autorelease];
@@ -123,8 +136,10 @@
             [carBtn.titleButton setBackgroundImage:[UIImage imageNamed:@"icon_routesearch_seg_car@2x"] forState:UIControlStateNormal];
             [carBtn.titleButton setBackgroundImage:[UIImage imageNamed:@"icon_routesearch_seg_car_selected@2x"] forState:UIControlStateHighlighted];
             [carBtn.titleButton addTarget:self action:@selector(ShowRoute:) forControlEvents:UIControlEventTouchUpInside];
+            //[carBtn addTarget:self action:@selector(ShowRoute:) forControlEvents:UIControlEventTouchUpInside];
             carBtn.titleLabel.text = @"驾车";
             carBtn.titleButton.tag = _BY_CAR_;
+            carBtn.tag             = _BY_CAR_;
             [view addSubview:carBtn];
             
             BMCustomButton *footBtn = [[[BMCustomButton alloc]initWithWidth:30 andOrigin:CGPointMake(210, 20)]autorelease];
@@ -132,8 +147,10 @@
             [footBtn.titleButton setBackgroundImage:[UIImage imageNamed:@"icon_routesearch_seg_foot@2x.png"] forState:UIControlStateNormal];
             [footBtn.titleButton setBackgroundImage:[UIImage imageNamed:@"icon_routesearch_seg_foot_selected@2x.png"] forState:UIControlStateHighlighted];
             [footBtn.titleButton addTarget:self action:@selector(ShowRoute:) forControlEvents:UIControlEventTouchUpInside];
+            [footBtn addTarget:self action:@selector(ShowRoute:) forControlEvents:UIControlEventTouchUpInside];
             footBtn.titleLabel.text = @"步行";
             footBtn.titleButton.tag = _BY_FOOT_;
+            footBtn.tag             = _BY_FOOT_;
             [view addSubview:footBtn];
             [self.view addSubview:view];
             
@@ -166,7 +183,7 @@
     }
 }
 
--(void)ShowRoute:(UIButton*)sender{
+-(void)ShowRoute:(UIControl*)sender{
     Vehicle  = sender.tag;
     switch (sender.tag) {
         case _BY_BUS_:{
@@ -186,13 +203,13 @@
         }
         case _BY_CAR_:{
             IsSearch = YES;
-
+            NSLog(@"lati = %f,long = %f",mapView.userLocation.coordinate.latitude,mapView.userLocation.coordinate.longitude);
             [search reverseGeocode:mapView.userLocation.coordinate];
             break;
         }
         case _BY_FOOT_:{
             IsSearch = YES;
-
+            NSLog(@"lati = %f,long = %f",mapView.userLocation.coordinate.latitude,mapView.userLocation.coordinate.longitude);
             [search reverseGeocode:mapView.userLocation.coordinate];
             break;
         }
@@ -204,7 +221,7 @@
 -(void)onGetAddrResult:(BMKAddrInfo *)result errorCode:(int)error{
     if (IsSearch) {
         if (![result.addressComponent.city isEqualToString:@"北京"]) {
-            NSLog(@"city = %@",result.addressComponent.city);
+            NSLog(@"city = %@",[NSString stringWithFormat:@"您的位置:%@,%@,%@",result.addressComponent.city,result.addressComponent.streetName,result.addressComponent.streetNumber]);
             UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"百度地图暂不支持城市之间查询" message:[NSString stringWithFormat:@"您的位置:%@,%@,%@",result.addressComponent.city,result.addressComponent.streetName,result.addressComponent.streetNumber] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
             [alertView show];
             [alertView release];
@@ -238,6 +255,9 @@
             }
             IsSearch = NO;
         }
+    }else {
+        NSString *title = [NSString stringWithFormat:@"您的位置:%@,%@,%@",result.addressComponent.city,result.addressComponent.streetName,result.addressComponent.streetNumber];
+        mapView.userLocation.title = title;
     }
     NSLog(@"vehicle = %d",LastVehicle);
 }
@@ -316,6 +336,15 @@
     IsSearch = NO;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    //[self ReloadData];
+    NSLog(@"appear");
+    mapView.showsUserLocation = YES;
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    mapView.showsUserLocation = NO;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if ([RoutesPlan.plans count] > 4) {
@@ -378,7 +407,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSMutableString *routeStr  = [[[NSMutableString alloc]init]autorelease];
-    UIAlertView *alertView     = [[UIAlertView alloc]initWithTitle:nil message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"显示地图",nil];
+    UIAlertView *alertView     = [[UIAlertView alloc]initWithTitle:nil message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
     alertView.delegate         = self;
     switch (Vehicle) {
         case _BY_BUS_:{
